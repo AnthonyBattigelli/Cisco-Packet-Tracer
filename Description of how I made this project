@@ -7,6 +7,7 @@ Server: 192.168.1.100 255.255.255.0
 Pc1: 192.168.1.11 255.255.255.0
 Pc0: 192.168.1.10 255.255.255.0
 Router: 192.168.1.1 255.255.255.0
+Switch: 192.168.1.2 255.255.255.0
 
 I then proceeded to go into the CLI of the switch and router and configured them with these codes;
 
