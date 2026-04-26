@@ -1,0 +1,39 @@
+In this screenshot I took, I did the following:
+
+First I placed all the pc's, the server, switch and router in their places.
+Secondly I configured every device to have their very own IP and Subnet Masks;
+
+Server: 192.168.1.100 255.255.255.0
+Pc1: 192.168.1.11 255.255.255.0
+Pc0: 192.168.1.10 255.255.255.0
+Router: 192.168.1.1 255.255.255.0
+
+I then proceeded to go into the CLI of the switch and router and configured them with these codes;
+
+Router: 
+
+enable
+configure terminal
+interface gigabitEthernet0/0
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+exit
+end
+write
+
+Switch: 
+
+enable
+configure terminal
+hostname OfficeSwitch
+interface vlan 1
+ip address 192.168.1.2 255.255.255.0
+no shutdown
+exit
+ip default-gateway 192.168.1.1
+end
+write
+
+Once that was all done, I then proceeded to ping every device to make sure they could talk to each other without any conflicts.
+
+This is just a very basic Network configuration for a small office.
